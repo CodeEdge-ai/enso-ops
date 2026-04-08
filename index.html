@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ENSO OPS — Derek Command Centre</title>
+<title>ZENVIA SERVICES — Derek Command Centre</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -405,8 +405,8 @@
 <!-- SIDEBAR -->
 <nav class="sidebar">
   <div class="logo">
-    <div class="logo-title">ENSO OPS</div>
-    <div class="logo-sub">Derek Command Centre</div>
+    <div class="logo-title">ZENVIA</div>
+    <div class="logo-sub">Services · Gachie, Kiambu</div>
   </div>
 
   <div class="nav-section">Daily</div>
@@ -1940,7 +1940,7 @@ function buildReport() {
   const win = document.getElementById('rpt-win').value||'—';
   const fix = document.getElementById('rpt-fix').value||'—';
 
-  const report = `📊 *ENSO OPS — EOD REPORT*
+  const report = `📊 *ZENVIA SERVICES — EOD REPORT*
 📅 ${fmtDate(t)}
 ───────────────────────
 ✅ Bookings Closed: ${bookings}
@@ -1952,7 +1952,7 @@ function buildReport() {
 🏆 Key Win: ${win}
 🔧 Fix Tomorrow: ${fix}
 ───────────────────────
-Sent via ENSO OPS`;
+Sent via ZENVIA SERVICES`;
 
   document.getElementById('report-preview').textContent = report;
 }
@@ -2042,7 +2042,7 @@ function generateEODHTML(d) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ENSO OPS — EOD Report ${fmtDate(d.date)}</title>
+<title>ZENVIA SERVICES — EOD Report ${fmtDate(d.date)}</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
@@ -2096,8 +2096,8 @@ function generateEODHTML(d) {
 <div class="page">
   <div class="header">
     <div>
-      <div class="logo">ENSO OPS</div>
-      <div class="logo-sub">Derek Command Centre · Nairobi, Kenya</div>
+      <div class="logo">ZENVIA SERVICES</div>
+      <div class="logo-sub">Derek Command Centre · Gachie, Kiambu</div>
     </div>
     <div class="report-type">
       <h1>END OF DAY REPORT</h1>
@@ -2184,15 +2184,15 @@ function generateEODHTML(d) {
   </div>
 
   <div class="footer">
-    <div class="footer-logo">ENSO OPS</div>
+    <div class="footer-logo">ZENVIA SERVICES</div>
     <div>Generated ${new Date().toLocaleString('en-KE')} · Consultant: Derek Mulima Murongi</div>
-    <div>ENSO Consultancy & Services Ltd. · Nairobi</div>
+    <div>ZENVIA Services · Gachie, Kiambu</div>
   </div>
 </div>
 </body>
 </html>`;
 
-  triggerDownload(html, `ENSO_EOD_${d.date}.html`);
+  triggerDownload(html, `ZENVIA_EOD_${d.date}.html`);
   toast('EOD report downloaded ⬇');
 }
 
@@ -2227,7 +2227,7 @@ function buildEOM() {
 
   const notes = document.getElementById('eom-notes')?.value || '';
 
-  const preview = `📊 ENSO OPS — EOM REPORT
+  const preview = `📊 ZENVIA SERVICES — EOM REPORT
 📅 ${monthNames[month]} ${year}
 ═══════════════════════════════
 BOOKINGS
@@ -2253,7 +2253,7 @@ EARNINGS PROJECTION
 ═══════════════════════════════
 NOTES: ${notes||'—'}
 ═══════════════════════════════
-Generated via ENSO OPS`;
+Generated via ZENVIA SERVICES`;
 
   document.getElementById('eom-preview').textContent = preview;
   return { month, year, monthNames, prefix, confirmed, noShows, revenue, activePartners, newPartners, monthEvents, jumiaOrders, jumiaRevenue, earnings, notes };
@@ -2288,7 +2288,7 @@ function downloadEOM() {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ENSO OPS — EOM Report ${monthNames[month]} ${year}</title>
+<title>ZENVIA SERVICES — EOM Report ${monthNames[month]} ${year}</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
@@ -2347,8 +2347,8 @@ function downloadEOM() {
   <!-- Header -->
   <div class="header">
     <div>
-      <div class="logo">ENSO OPS</div>
-      <div class="logo-sub">Derek Command Centre · Nairobi, Kenya</div>
+      <div class="logo">ZENVIA SERVICES</div>
+      <div class="logo-sub">Derek Command Centre · Gachie, Kiambu</div>
     </div>
     <div class="report-title">
       <h1>MONTHLY PERFORMANCE REPORT</h1>
@@ -2478,15 +2478,15 @@ function downloadEOM() {
   </div>` : ''}
 
   <div class="footer">
-    <div class="footer-logo">ENSO OPS</div>
+    <div class="footer-logo">ZENVIA SERVICES</div>
     <div>Generated ${new Date().toLocaleString('en-KE')} · Consultant: Derek Mulima Murongi (ID: 33277836)</div>
-    <div>ENSO Consultancy & Services Ltd. · Nairobi, Kenya</div>
+    <div>ZENVIA Services · Gachie, Kiambu</div>
   </div>
 </div>
 </body>
 </html>`;
 
-  triggerDownload(html, `ENSO_EOM_${year}-${month}.html`);
+  triggerDownload(html, `ZENVIA_EOM_${year}-${month}.html`);
   toast('EOM report downloaded ⬇');
 }
 
